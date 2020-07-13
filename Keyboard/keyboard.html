@@ -102,7 +102,6 @@
     <script>
 
     	function playNote(e){
-
     		const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     		if(!key) return;
     		if(e.keyCode < 58){
@@ -111,12 +110,9 @@
     		else{
     			key.classList.add("playWhite");
     		}
-
     	}
 
     	function removeTransition(e){
-    		console.log(this.classList);
-    		console.log("hello");
     		if(this.classList.contains("playBlack")){
     			this.classList.remove("playBlack");
     		}
@@ -130,6 +126,9 @@
     	keys.forEach(key => key.addEventListener("transitionend", removeTransition));
 
     	window.addEventListener("keydown", playNote);
+    	// add event of clcking on a key
+    	// add audio
+    	// add holding down a key?
 
     </script>
 
